@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription API</title>
+    <link href="app.css" rel="stylesheet"/>
+    <script defer src="app.js"></script>
+</head>
+<body>
+<h1>Subscription API</h1>
+<!-- FORMULIER: CREATE (POST) -->
+<section>
+    <h2>Create Subscription (POST)</h2>
+    <form id="createSubscriptionForm" method="post">
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname">
+            <span class="validation-message" id="firstname-validation">First name is required.</span>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname">
+            <span class="validation-message" id="lastname-validation">Last name is required.</span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span class="validation-message" id="email-validation">Email is required.</span>
+        </div>
+        <div class="form-group">
+            <label for="phonenumber">Phone Number:</label>
+            <input type="tel" id="phonenumber" name="phonenumber">
+        </div>
+        <button type="submit">Create Subscription</button>
+    </form>
+    <pre id="createResponse"></pre>
+</section>
+<!-- FORMULIER: UPDATE (PUT) -->
+<section>
+    <h2>Update Subscription (PUT)</h2>
+    <form id="updateSubscriptionForm">
+        <div class="form-group">
+            <label for="update-id">Subscription ID:</label>
+            <input type="text" id="update-id" name="id" required>
+            <span class="validation-message">Subscription ID is required.</span>
+        </div>
+        <div class="form-group">
+            <label for="update-firstname">First Name:</label>
+            <input type="text" id="update-firstname" name="firstname">
+        </div>
+        <div class="form-group">
+            <label for="update-lastname">Last Name:</label>
+            <input type="text" id="update-lastname" name="lastname">
+        </div>
+        <div class="form-group">
+            <label for="update-email">Email:</label>
+            <input type="email" id="update-email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="update-phonenumber">Phone Number:</label>
+            <input type="tel" id="update-phonenumber" name="phonenumber">
+        </div>
+        <button type="submit">Update Subscription</button>
+    </form>
+    <pre id="updateResponse"></pre>
+</section>
+<!-- FORMULIER: DELETE -->
+<section>
+    <h2>Delete Subscription (DELETE)</h2>
+    <form id="deleteSubscriptionForm">
+        <div class="form-group">
+            <label for="delete-id">Subscription ID:</label>
+            <input type="text" id="delete-id" name="id" required>
+            <span class="validation-message">Subscription ID is required.</span>
+        </div>
+        <button type="submit">Delete Subscription</button>
+    </form>
+    <pre id="deleteResponse"></pre>
+</section>
+
+<!-- ALLE SUBSCRIPTIONS OPHALEN -->
+<section>
+    <h2>All Subscriptions</h2>
+    <button id="fetchSubscriptionsButton">Get All Subscriptions</button>
+    <pre id="subscriptions"></pre>
+</section>
+
+<!-- Een Subscriptie ophalen  -->
+
+<!-- een subscriptie ophalen dit moet een subscriptie ophalen  via de id   -->
+<section>
+    <h2>Get One Subscription (GET)</h2>
+    <form id="getOneSubscriptionForm">
+        <div class="form-group">
+            <label for="get-id">Subscription ID:</label>
+            <input type="text" id="get-id" name="id" required>
+            <span class="validation-message">Subscription ID is required.</span>
+        </div>
+        <button type="submit">Get Subscription</button>
+    </form>
+    <pre id="getOneResponse"></pre>
+</section>
+</body>
+</html>
